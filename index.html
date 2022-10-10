@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>jquery-flexisel carousel</title>
+  </head>
+  <body>
+    <div class="container my-3">
+      <ul id="flexiselCarousel">
+        <li>
+        	<img src="images/exercise.png" alt="" />
+          	<button type="button" class="btn btn-primary play">
+            	<a href="#" style="text-decoration: none; color: white">
+              		<i class="fa-solid fa-eye"></i>
+            	</a>
+          	</button>
+		  	<div class="floods-text mt-3">
+				<h3>topic about the post
+					<span>category</i></span>
+				</h3>
+			</div>
+        </li>
+        <li>
+          <img src="images/What type of foods should I avoid.jpg" alt="" />
+          <button type="button" class="btn btn-primary play">
+            <a href="#" style="text-decoration: none; color: white">
+              <i class="fa-solid fa-eye"></i>
+            </a>
+          </button>
+		  <div class="floods-text mt-3">
+			<h3>topic about the post
+				<span>category</i></span>
+			</h3>
+		</div>
+        </li>
+        <li>
+          	<img src="images/the moment.jpg" alt="" />
+          	<button type="button" class="btn btn-primary play">
+            	<a href="#" style="text-decoration: none; color: white">
+              		<i class="fa-solid fa-eye"></i>
+            	</a>
+          	</button>
+			<div class="floods-text mt-3">
+				<h3>topic about the post
+					<span>category</i></span>
+				</h3>
+			</div>
+        </li>
+        <li>
+          	<img src="images/How to Be More Flexible.jpg" alt="" />
+          	<button type="button" class="btn btn-primary play">
+            	<a href="#" style="text-decoration: none; color: white">
+              		<i class="fa-solid fa-eye"></i>
+            	</a>
+          	</button>
+			<div class="floods-text mt-3">
+				<h3>topic about the post
+					<span>category</i></span>
+				</h3>
+			</div>
+        </li>
+      </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-1.7.1.min.js"
+    ></script>
+    <script type="text/javascript" src="js/jquery.flexisel.js"></script>
+    <script>
+      $(window).load(function () {
+        $("#flexiselCarousel").flexisel({
+          visibleItems: 4,
+          itemsToScroll: 2,
+          animationSpeed: 400,
+          infinite: true,
+          navigationTargetSelector: null,
+          autoPlay: {
+            enable: true,
+            interval: 5000,
+            pauseOnHover: true,
+          },
+          responsiveBreakpoints: {
+            portrait: {
+              changePoint: 480,
+              visibleItems: 1,
+              itemsToScroll: 1,
+            },
+            landscape: {
+              changePoint: 640,
+              visibleItems: 2,
+              itemsToScroll: 2,
+            },
+            tablet: {
+              changePoint: 768,
+              visibleItems: 3,
+              itemsToScroll: 3,
+            },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
